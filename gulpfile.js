@@ -8,9 +8,15 @@ var cssnano = require('gulp-cssnano');
 var del = require('del');
 var runSequence = require('run-sequence');
 var pug = require('gulp-pug');
+// var mainBowerFiles = require('main-bower-files')
+
+// gulp.task('mainBowerFiles', function() {
+//   return gulp.src(mainBowerFiles())
+//     .pipe(gulp.dest('app/scr'))
+// })
 
 gulp.task('pug', function(){
-  return gulp.src('app/views/**/*.+(pug|jade)')
+  return gulp.src(['app/views/**/*.+(pug|jade)','!app/views/includes/**/*.*'])
   .pipe(pug({
     doctype: 'html',
     pretty: true
@@ -27,7 +33,7 @@ gulp.task('sass', function() {
 		}))
 });
 
-gulp.task('watch', ['browserSync','pug', 'sass'], function() {
+gulp.task('watch', ['browserSync', 'pug', 'sass'], function() {
   gulp.watch('app/views/**/*.+(pug|jade)', ['pug']);
 	gulp.watch('app/scss/**/*.scss', ['sass']);
 	gulp.watch('app/*.html', browserSync.reload);
@@ -39,6 +45,7 @@ gulp.task('browserSync', function() {
 		server: {
 			baseDir: 'app'
 		},
+    browser: 'google Chrome'
 	})
 })
 

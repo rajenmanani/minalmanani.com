@@ -1,16 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- build:js js/main.min.js-->
     <script src="js/main.js"></script>
+    <script src="js/mdl/material.min.js"></script>
     <!-- endbuild-->
     <!-- build:css css/styles.min.css-->
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/test.css">
+    <link rel="stylesheet" href="css/mdl/material.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <!-- endbuild-->
   </head>
   <body>
-    <h1>Hello</h1>
-    <p>how are you today?</p>
+    <div class="mdl-layout mdl-js-layout">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout-icon"></div>
+        <div class="mdl-layout__header-row"><span class="mdl-layout__title">Simple Layout</span>
+          <div class="mdl-layout-spacer"></div>
+          <div class="mdl-navigation"><a class="mdl-navigation__link" href="#">nav link 1</a><a class="mdl-navigation__link" href="#">nav link 2</a><a class="mdl-navigation__link" href="#">nav link 3</a></div>
+        </div>
+      </header>
+      <div class="mdl-layout__drawer"><span class="mdl-layout__title">Simple Layout</span>
+        <div class="mdl-navigation"><a class="mdl-navigation__link" href="#">nav link 1</a><a class="mdl-navigation__link" href="#">nav link 2</a><a class="mdl-navigation__link" href="#">nav link 3</a></div>
+      </div>
+      <main class="md-layout__content">     
+        <h1>Hello</h1>
+        <p>how are you today?</p>
+      </main>
+    </div>
   </body>
 </html>

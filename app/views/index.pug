@@ -1,12 +1,22 @@
-html
-  head
-    // build:js js/main.min.js
-    script(src='js/main.js')
-    // endbuild
-    // build:css css/styles.min.css
-    link(rel='stylesheet', href='css/styles.css')
-    link(rel='stylesheet', href='css/test.css')
-    // endbuild
-  body
-    h1 Hello
-    p how are you today?
+extends includes/layout.pug
+
+block content
+  .mdl-layout.mdl-js-layout
+    header.mdl-layout__header
+      .mdl-layout-icon
+      .mdl-layout__header-row
+        span.mdl-layout__title Simple Layout
+        .mdl-layout-spacer
+        .mdl-navigation
+          a.mdl-navigation__link(href="#") nav link 1
+          a.mdl-navigation__link(href="#") nav link 2
+          a.mdl-navigation__link(href="#") nav link 3
+    .mdl-layout__drawer
+      span.mdl-layout__title Simple Layout
+      .mdl-navigation
+        a.mdl-navigation__link(href="#") nav link 1
+        a.mdl-navigation__link(href="#") nav link 2
+        a.mdl-navigation__link(href="#") nav link 3
+    main.md-layout__content      
+      h1 Hello
+      p how are you today?
