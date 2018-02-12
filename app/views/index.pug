@@ -1,22 +1,44 @@
 extends includes/layout.pug
 
 block content
-  .mdl-layout.mdl-js-layout
-    header.mdl-layout__header
-      .mdl-layout-icon
-      .mdl-layout__header-row
-        span.mdl-layout__title Simple Layout
-        .mdl-layout-spacer
-        .mdl-navigation
-          a.mdl-navigation__link(href="#") nav link 1
-          a.mdl-navigation__link(href="#") nav link 2
-          a.mdl-navigation__link(href="#") nav link 3
-    .mdl-layout__drawer
-      span.mdl-layout__title Simple Layout
-      .mdl-navigation
-        a.mdl-navigation__link(href="#") nav link 1
-        a.mdl-navigation__link(href="#") nav link 2
-        a.mdl-navigation__link(href="#") nav link 3
-    main.md-layout__content      
-      h1 Hello
-      p how are you today?
+  //- .mdl-layout.mdl-js-layout
+  //-   header.mdl-layout__header
+  //-     .mdl-layout-icon
+  //-     .mdl-layout__header-row
+  //-       span.mdl-layout__title Simple Layout
+  //-       .mdl-layout-spacer
+  //-       .mdl-navigation
+  //-         a.mdl-navigation__link(href="#") nav link 1
+  //-         a.mdl-navigation__link(href="#") nav link 2
+  //-         a.mdl-navigation__link(href="#") nav link 3
+  //-   .mdl-layout__drawer
+  //-     span.mdl-layout__title Simple Layout
+  //-     .mdl-navigation
+  //-       a.mdl-navigation__link(href="#") nav link 1
+  //-       a.mdl-navigation__link(href="#") nav link 2
+  //-       a.mdl-navigation__link(href="#") nav link 3
+  //-   main.md-layout__content      
+  //-     h1 Hello
+  //-     p how are you today?
+  include includes/common_header.pug
+  .mdl-grid.pad
+    .mdl-cell.mdl-cell--2-col
+    .mdl-cell.mdl-cell--2-col.shade 2
+    .mdl-cell.mdl-cell--2-col.shade 2
+    .mdl-cell.mdl-cell--2-col.shade 2
+    .mdl-cell.mdl-cell--2-col.shade 2
+    .mdl-cell.mdl-cell--2-col
+  .mdl-grid.pad
+    .mdl-cell.mdl-cell--2-col
+    .mdl-cell.mdl-cell--2-col.shade 2
+    .mdl-cell.mdl-cell--2-col.shade 2
+    .mdl-cell.mdl-cell--2-col.shade 2
+    .mdl-cell.mdl-cell--2-col.shade 2
+    .mdl-cell.mdl-cell--2-col
+  .mdl-grid.pad
+    .mdl-cell.mdl-cell--2-col
+    .mdl-cell.mdl-cell--2-col.shade 2
+    .mdl-cell.mdl-cell--2-col.shade 2
+    .mdl-cell.mdl-cell--2-col.shade 2
+    .mdl-cell.mdl-cell--2-col.shade 2
+    .mdl-cell.mdl-cell--2-col
