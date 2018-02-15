@@ -1,5 +1,8 @@
 extends includes/layout.pug
 
+prepend scripts
+  script(src="js/masonry/masonry.pkgd.min.js")
+  
 block content
   //- .mdl-layout.mdl-js-layout
   //-   header.mdl-layout__header
@@ -21,24 +24,59 @@ block content
   //-     h1 Hello
   //-     p how are you today?
   include includes/common_header.pug
-  .mdl-grid.pad
-    .mdl-cell.mdl-cell--2-col
-    .mdl-cell.mdl-cell--2-col.shade 2
-    .mdl-cell.mdl-cell--2-col.shade 2
-    .mdl-cell.mdl-cell--2-col.shade 2
-    .mdl-cell.mdl-cell--2-col.shade 2
-    .mdl-cell.mdl-cell--2-col
-  .mdl-grid.pad
-    .mdl-cell.mdl-cell--2-col
-    .mdl-cell.mdl-cell--2-col.shade 2
-    .mdl-cell.mdl-cell--2-col.shade 2
-    .mdl-cell.mdl-cell--2-col.shade 2
-    .mdl-cell.mdl-cell--2-col.shade 2
-    .mdl-cell.mdl-cell--2-col
-  .mdl-grid.pad
-    .mdl-cell.mdl-cell--2-col
-    .mdl-cell.mdl-cell--2-col.shade 2
-    .mdl-cell.mdl-cell--2-col.shade 2
-    .mdl-cell.mdl-cell--2-col.shade 2
-    .mdl-cell.mdl-cell--2-col.shade 2
-    .mdl-cell.mdl-cell--2-col
+  .mdl-grid
+    .mdl-cell.mdl-cell--2-col 2
+    .mdl-cell.mdl-cell--8-col 
+      .grid
+        .grid-item
+          img(src='images/8.jpg')
+        .grid-item
+          img(src='images/5.jpg')
+        .grid-item
+          img(src='images/9.jpg')
+        .grid-item
+          img(src='images/2.jpg')
+        .grid-item
+          img(src='images/7.jpg')
+        .grid-item
+          img(src='images/1.jpg')
+        .grid-item
+          img(src='images/4.jpg')
+        .grid-item
+          img(src='images/3.jpg')
+        .grid-item
+          img(src='images/6.png')
+    .mdl-cell.mdl-cell--2-col 2
+    script(src="js/main.js")
+      
+  //- .mdl-grid
+  //-   .mdl-cell.mdl-cell--2-col.mdl-cell--hide-phone
+  //-   .mdl-cell.mdl-cell--8-col.mdl-cell--12-col-phone
+  //-     .mdl-grid.mdl-grid--nesting
+  //-       .mdl-cell.mdl-cell--3-col.mdl-cell--2-col-phone.main-gallery
+  //-         img(src='images/8.jpg')
+  //-         img(src='images/5.jpg')
+  //-       .mdl-cell.mdl-cell--3-col.mdl-cell--2-col-phone.main-gallery
+  //-         img(src='images/9.jpg')
+  //-         img(src='images/2.jpg')
+  //-         img(src='images/7.jpg')
+  //-       .mdl-cell.mdl-cell--3-col.mdl-cell--2-col-phone.main-gallery
+  //-         img(src='images/1.jpg')
+  //-         img(src='images/4.jpg')
+  //-       .mdl-cell.mdl-cell--3-col.mdl-cell--2-col-phone.main-gallery
+  //-         img(src='images/3.jpg')
+  //-         img(src='images/6.png')
+  //-   .mdl-cell.mdl-cell--2-col.mdl-cell--hide-phone
+  //- section.footer-menu-section
+  //-   .mdl-grid.pad
+  //-     .mdl-cell.mdl-cell--2-col
+  //-     .mdl-cell.mdl-cell--8-col.footer-menu
+  //-      .mdl-grid.mdl-grid--nesting.mdl-typography--text-center.footer-padding
+  //-        .mdl-cell.mdl-cell--3-col
+  //-        .mdl-cell.mdl-cell--2-col.footer-menu_a
+  //-         a(href='#') portfolio
+  //-        .mdl-cell.mdl-cell--2-col.footer-menu_a
+  //-         a(href='#') about
+  //-        .mdl-cell.mdl-cell--2-col.footer-menu_a
+  //-         a(href='#') contact
+  
