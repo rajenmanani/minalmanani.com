@@ -95,9 +95,16 @@ a:hover {
     text-align: center;
     margin: 20px 0 0; } }
 
+.grid {
+  max-width: 69em;
+  list-style: none;
+  margin: 30px auto;
+  padding: 1; }
+
 .grid-item {
   width: 231px;
   margin-bottom: 10px; }
 
 .grid-item > img {
+  width: 100%;
   display: block; }
