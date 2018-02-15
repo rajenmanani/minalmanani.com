@@ -32,6 +32,14 @@ gulp.task('sass', function() {
 			stream: true
 		}))
 });
+gulp.task('browserSync', function() {
+  browserSync.init({
+    server: {
+      baseDir: 'app'
+    },
+    browser: 'google Chrome'
+  })
+})
 
 gulp.task('watch', ['browserSync', 'pug', 'sass'], function() {
   gulp.watch('app/views/**/*.+(pug|jade)', ['pug']);
@@ -40,14 +48,6 @@ gulp.task('watch', ['browserSync', 'pug', 'sass'], function() {
 	gulp.watch('app/js/**/*.js', browserSync.reload);
 });
 
-gulp.task('browserSync', function() {
-	browserSync.init({
-		server: {
-			baseDir: 'app'
-		},
-    browser: 'google Chrome'
-	})
-})
 
 gulp.task('useref', function() {
 	return gulp.src('app/*.html')
