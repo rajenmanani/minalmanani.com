@@ -1,82 +1,44 @@
 extends includes/layout.pug
 
-prepend scripts
-  script(src="js/masonry/masonry.pkgd.min.js")
+append scripts
+  script(src='js/masonry/masonry.pkgd.min.js')
+  
+append css
   
 block content
-  //- .mdl-layout.mdl-js-layout
-  //-   header.mdl-layout__header
-  //-     .mdl-layout-icon
-  //-     .mdl-layout__header-row
-  //-       span.mdl-layout__title Simple Layout
-  //-       .mdl-layout-spacer
-  //-       .mdl-navigation
-  //-         a.mdl-navigation__link(href="#") nav link 1
-  //-         a.mdl-navigation__link(href="#") nav link 2
-  //-         a.mdl-navigation__link(href="#") nav link 3
-  //-   .mdl-layout__drawer
-  //-     span.mdl-layout__title Simple Layout
-  //-     .mdl-navigation
-  //-       a.mdl-navigation__link(href="#") nav link 1
-  //-       a.mdl-navigation__link(href="#") nav link 2
-  //-       a.mdl-navigation__link(href="#") nav link 3
-  //-   main.md-layout__content      
-  //-     h1 Hello
-  //-     p how are you today?
+  include includes/mobile_nav.pug
   include includes/common_header.pug
   .mdl-grid
-    .mdl-cell.mdl-cell--2-col 2
-    .mdl-cell.mdl-cell--8-col 
-      .grid
-        .grid-item
-          img(src='images/8.jpg')
-        .grid-item
-          img(src='images/5.jpg')
-        .grid-item
-          img(src='images/9.jpg')
-        .grid-item
-          img(src='images/2.jpg')
-        .grid-item
-          img(src='images/7.jpg')
-        .grid-item
-          img(src='images/1.jpg')
-        .grid-item
-          img(src='images/4.jpg')
-        .grid-item
-          img(src='images/3.jpg')
-        .grid-item
-          img(src='images/6.png')
-    .mdl-cell.mdl-cell--2-col 2
-    script(src="js/main.js")
-      
-  //- .mdl-grid
-  //-   .mdl-cell.mdl-cell--2-col.mdl-cell--hide-phone
-  //-   .mdl-cell.mdl-cell--8-col.mdl-cell--12-col-phone
-  //-     .mdl-grid.mdl-grid--nesting
-  //-       .mdl-cell.mdl-cell--3-col.mdl-cell--2-col-phone.main-gallery
-  //-         img(src='images/8.jpg')
-  //-         img(src='images/5.jpg')
-  //-       .mdl-cell.mdl-cell--3-col.mdl-cell--2-col-phone.main-gallery
-  //-         img(src='images/9.jpg')
-  //-         img(src='images/2.jpg')
-  //-         img(src='images/7.jpg')
-  //-       .mdl-cell.mdl-cell--3-col.mdl-cell--2-col-phone.main-gallery
-  //-         img(src='images/1.jpg')
-  //-         img(src='images/4.jpg')
-  //-       .mdl-cell.mdl-cell--3-col.mdl-cell--2-col-phone.main-gallery
-  //-         img(src='images/3.jpg')
-  //-         img(src='images/6.png')
-  //-   .mdl-cell.mdl-cell--2-col.mdl-cell--hide-phone
-  //- section.footer-menu-section
-  //-   .mdl-grid.pad
-  //-     .mdl-cell.mdl-cell--2-col
-  //-     .mdl-cell.mdl-cell--8-col.footer-menu
-  //-      .mdl-grid.mdl-grid--nesting.mdl-typography--text-center.footer-padding
-  //-        .mdl-cell.mdl-cell--3-col
-  //-        .mdl-cell.mdl-cell--2-col.footer-menu_a
-  //-         a(href='#') portfolio
-  //-        .mdl-cell.mdl-cell--2-col.footer-menu_a
-  //-         a(href='#') about
-  //-        .mdl-cell.mdl-cell--2-col.footer-menu_a
-  //-         a(href='#') contact
-  
+    .mdl-cell.mdl-cell--2-col.mdl-cell--hide-phone
+    .mdl-cell.mdl-cell--8-col.main-gallery
+      #grid.grid.effect-2
+        .item
+          a(href='#')
+            img(src='images/8.jpg')
+        .item
+          a(href='#')
+            img(src='images/9.jpg')
+        .item
+          a(href='#')
+            img(src='images/1.jpg')
+        .item
+          a(href='#')
+            img(src='images/3.jpg')
+        .item
+          a(href='#')
+            img(src='images/6.png')
+        .item
+          a(href='#')
+            img(src='images/2.jpg')
+        .item
+          a(href='#')
+            img(src='images/4.jpg')
+        .item
+          a(href='#')
+            img(src='images/5.jpg')
+        .item
+          a(href='#')
+            img(src='images/7.jpg')
+              
+block bodyscripts           
+  script(src="js/main.js")

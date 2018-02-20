@@ -4,17 +4,29 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="js/masonry/masonry.pkgd.min.js"></script>
     <!-- build:js js/main.min.js-->
+    <script src="js/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/mdl/material.min.js"></script>
-    <!-- endbuild-->
+    <script src="js/masonry/masonry.pkgd.min.js"></script>
+    <!--  endbuild-->
     <!-- build:css css/styles.min.css-->
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/mdl/material.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <!-- endbuild-->
   </head>
   <body>
+    <header class="cd-header"><a class="cd-primary-nav-trigger" href="#0"><span class="cd-menu-icon"></span></a></header>
+    <nav>
+      <ul class="cd-primary-nav">
+        <li class="font_1"><a href="#0">portfolio</a></li>
+        <div class="menu_separator"></div>
+        <li class="font_1"><a href="#0">about</a></li>
+        <div class="menu_separator"></div>
+        <li class="font_1"><a href="#0">contact</a></li>
+      </ul>
+    </nav>
     <div class="mdl-grid">
       <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-phone"></div>
       <div class="mdl-cell mdl-cell--8-col">
@@ -22,22 +34,39 @@
       </div>
     </div>
     <div class="mdl-grid">
-      <div class="mdl-cell mdl-cell--2-col">2</div>
-      <div class="mdl-cell mdl-cell--8-col"> 
-        <div class="grid">
-          <div class="grid-item"><img src="images/8.jpg"></div>
-          <div class="grid-item"><img src="images/5.jpg"></div>
-          <div class="grid-item"><img src="images/9.jpg"></div>
-          <div class="grid-item"><img src="images/2.jpg"></div>
-          <div class="grid-item"><img src="images/7.jpg"></div>
-          <div class="grid-item"><img src="images/1.jpg"></div>
-          <div class="grid-item"><img src="images/4.jpg"></div>
-          <div class="grid-item"><img src="images/3.jpg"></div>
-          <div class="grid-item"><img src="images/6.png"></div>
+      <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-phone"></div>
+      <div class="mdl-cell mdl-cell--8-col main-gallery">
+        <div class="grid effect-2" id="grid">
+          <div class="item"><a href="#"><img src="images/8.jpg"></a></div>
+          <div class="item"><a href="#"><img src="images/9.jpg"></a></div>
+          <div class="item"><a href="#"><img src="images/1.jpg"></a></div>
+          <div class="item"><a href="#"><img src="images/3.jpg"></a></div>
+          <div class="item"><a href="#"><img src="images/6.png"></a></div>
+          <div class="item"><a href="#"><img src="images/2.jpg"></a></div>
+          <div class="item"><a href="#"><img src="images/4.jpg"></a></div>
+          <div class="item"><a href="#"><img src="images/5.jpg"></a></div>
+          <div class="item"><a href="#"><img src="images/7.jpg"></a></div>
         </div>
       </div>
-      <div class="mdl-cell mdl-cell--2-col">2</div>
-      <script src="js/main.js"></script>
     </div>
+    <section class="footer-menu-section">
+      <div class="mdl-grid mdl-cell--hide-phone">
+        <div class="mdl-cell mdl-cell--2-col"></div>
+        <div class="mdl-cell mdl-cell--8-col footer-menu">
+          <div class="mdl-grid mdl-grid--nesting mdl-typography--text-center footer-padding">
+            <div class="mdl-cell mdl-cell--3-col"></div>
+            <div class="mdl-cell mdl-cell--2-col footer-menu_a"><a href="#">portfolio</a></div>
+            <div class="mdl-cell mdl-cell--2-col footer-menu_a"><a href="#">about</a></div>
+            <div class="mdl-cell mdl-cell--2-col footer-menu_a"><a href="#">contact</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--12-col">
+          <p class="font_9 mdl-typography--text-center"> © 2018 Minal Manani Limited</p>
+        </div>
+      </div>
+    </section>
+    <script src="js/main.js"></script>
   </body>
 </html>

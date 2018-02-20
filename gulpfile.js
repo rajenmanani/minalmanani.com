@@ -37,7 +37,8 @@ gulp.task('browserSync', function() {
     server: {
       baseDir: 'app'
     },
-    browser: 'google Chrome'
+    browser: 'google Chrome',
+    notify: false
   })
 })
 
@@ -62,12 +63,22 @@ gulp.task('fonts', function() {
 		.pipe(gulp.dest('dist/fonts'))
 })
 
+gulp.task('images', function() {
+  return gulp.src('app/images/**/*')
+  .pipe(gulp.dest('dist/images'))
+})
+
+gulp.task('js', ['useref'], function() {
+  return gulp.src('app/js/**/*')
+  .pipe(gulp.dest('dist/js'))
+})
+
 gulp.task('clean:dist', function() {
 	return del.sync('dist')
 })
 
 gulp.task('build', function(callback) {
-	runSequence('clean:dist', ['sass', 'useref', 'fonts'],
+	runSequence('clean:dist', ['sass', 'useref', 'fonts', 'images', 'js'],
 		callback
 	);
 });
