@@ -1,3 +1,5 @@
+@import url( 'https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:100,300,400,700');
+
 *,
 *:after,
 *:before {
@@ -13,18 +15,28 @@ html {
   padding: 0;
   margin: 0;
 }
-.clearfix:before, .clearfix:after { content: " "; display: table; }
-.clearfix:after { clear: both; }
+
+.clearfix:after,
+.clearfix:before {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
 img {
   border: 0;
   display: block;
   width: 100%;
 }
+
 .grid {
-	max-width: 69em;
-	list-style: none;
-	margin: 0 auto;
-	padding: 1;
+  max-width: 69em;
+  list-style: none;
+  margin: 0 auto;
+  padding: 1;
 }
 
 .grid .item {
@@ -72,12 +84,11 @@ img {
   .grid .item {
     width: 50%;
   }
-
 }
 @media screen and (max-width: 480px) {
   .grid .item {
     width: 50%;
-    padding: 10px
+    padding: 10px;
   }
 
   .common_header {
@@ -86,15 +97,42 @@ img {
     padding-left: 10px;
     margin-bottom: 17px !important;
   }
+
   .main-gallery {
     margin-top: 0 !important;
     z-index: -3;
-
   }
 
+  .contact-form-header {
+    p {
+      text-align: center;
+    }
+  }
+
+  .contact-form-emil {
+    a {
+      font-size: 16px;
+    }
+  }
+
+  .contact-form-nav {
+    z-index: -3;
+  }
+
+  .form-style {
+    input,
+    textarea {
+      width: 100%;
+      border: 1px solid rgba(42, 42, 42, 1);
+      padding: 5px;
+      color: #808080;
+      margin: 0 0 5px;
+      font: normal normal 100 14px/1.4em 'Roboto',sans-serif !important;
+      line-height: 35px !important;
+    }
+  }
 }
 // my stylesheet
-@import url( 'https://fonts.googleapis.com/css?family=Open+Sans:400,700');
 
 .font_0 {
   font: normal normal bold 24px/1.4em 'open sans',sans-serif;
@@ -130,19 +168,31 @@ img {
   font: normal normal normal 19px/1.4em 'open sans',sans-serif;
   color: #2A2A2A;
 }
+// .font_7 {
+//   font: normal normal bold 16px/1.4em din-next-w01-light,din-next-w02-light,din-next-w10-light,sans-serif;
+//   color: #2A2A2A;
+// }
 
 .font_7 {
-  font: normal normal bold 16px/1.4em din-next-w01-light,din-next-w02-light,din-next-w10-light,sans-serif;
+  font: normal normal 300 14px/1.4em 'Roboto',sans-serif;
   color: #2A2A2A;
 }
+// .font_8 {
+//   font: normal normal normal 14px/1.4em din-next-w01-light,din-next-w02-light,din-next-w10-light,sans-serif;
+//   color: #2A2A2A;
+// }
 
 .font_8 {
-  font: normal normal normal 14px/1.4em din-next-w01-light,din-next-w02-light,din-next-w10-light,sans-serif;
+  font: normal normal 300 14px/1.4em 'Roboto',sans-serif;
   color: #2A2A2A;
 }
+// .font_9 {
+//   font: normal normal 100 11px/1.4em din-next-w01-light,din-next-w02-light,din-next-w10-light,sans-serif;
+//   color: #2A2A2A;
+// }
 
 .font_9 {
-  font: normal normal 100 11px/1.4em din-next-w01-light,din-next-w02-light,din-next-w10-light,sans-serif;
+  font: normal normal 300 11px/1.4em 'Roboto',sans-serif;
   color: #2A2A2A;
 }
 
@@ -162,7 +212,7 @@ img {
 }
 
 .footer-menu-section {
-  padding: 40px 0 0 0;
+  padding: 40px 0 0;
 }
 
 .footer-menu {
@@ -173,20 +223,26 @@ img {
   font: normal normal bold 13px/1.4em 'open sans',sans-serif;
 }
 
-a {
-  color: inherit !important;
-  font-weight: inherit !important;
-  text-decoration: none;
-  -o-transition: 0.5s;
-  -ms-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -webkit-transition: 0.5s;
-  /* ...and now for the proper property */
-  transition: 0.5s;
+.footer-menu_a {
+  a {
+    font-weight: bold;
+    color: inherit !important;
+    text-decoration: none;
+    -o-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -webkit-transition: 0.5s;
+    /* ...and now for the proper property */
+    transition: 0.5s;
+  }
+
+  a:hover {
+    color: #FFFFFF !important;
+  }
 }
 
-a:hover {
-  color: #FFFFFF !important;
+a {
+  text-decoration: none;
 }
 
 .footer-padding {
@@ -199,6 +255,53 @@ a:hover {
 }
 
 .item:hover {
-  opacity: 0.3 ;
-  filter: alpha(opacity=70) ;
+  opacity: 0.3;
+  filter: alpha(opacity=70);
+}
+
+.form-style {
+  input,
+  textarea {
+    width: 100%;
+    border: 1px solid rgba(42, 42, 42, 1);
+    padding: 5px;
+    color: #808080;
+    margin: 0 0 5px;
+    font: normal normal 100 13px/1.4em 'Roboto',sans-serif;
+  }
+
+  textarea {
+    min-height: 115px;
+    resize: none;
+  }
+
+  button {
+    background-color: rgba(42, 42, 42, 1);
+    border: 0;
+    color: #FFFFFF;
+    cursor: pointer;
+    float: right;
+    margin: 0;
+    max-width: 35%;
+    padding: 5px;
+  }
+}
+
+.contact-form-header {
+  position: relative;
+  top: 9px;
+
+  p {
+    letter-spacing: 4px;
+  }
+
+  .contact-form-emil {
+    p {
+      letter-spacing: 0;
+    }
+  }
+}
+
+.contact-extra-padding {
+  padding-top: 130px;
 }

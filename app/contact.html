@@ -7,7 +7,6 @@
     <!-- build:js js/main.min.js-->
     <script src="js/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/mdl/material.min.js"></script>
-    <script src="js/masonry/masonry.pkgd.min.js"></script>
     <!--  endbuild-->
     <!-- build:css css/styles.min.css-->
     <link rel="stylesheet" href="css/styles.css">
@@ -34,20 +33,28 @@
       </div>
     </div>
     <div class="mdl-grid">
-      <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-phone"></div>
-      <div class="mdl-cell mdl-cell--8-col main-gallery">
-        <div class="grid effect-2" id="grid">
-          <div class="item"><a href="#"><img src="images/8.jpg"></a></div>
-          <div class="item"><a href="#"><img src="images/9.jpg"></a></div>
-          <div class="item"><a href="#"><img src="images/1.jpg"></a></div>
-          <div class="item"><a href="#"><img src="images/3.jpg"></a></div>
-          <div class="item"><a href="#"><img src="images/6.png"></a></div>
-          <div class="item"><a href="#"><img src="images/2.jpg"></a></div>
-          <div class="item"><a href="#"><img src="images/4.jpg"></a></div>
-          <div class="item"><a href="#"><img src="images/5.jpg"></a></div>
-          <div class="item"><a href="#"><img src="images/7.jpg"></a></div>
+      <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-phone">   </div>
+      <div class="mdl-cell mdl-cell--8-col">
+        <div class="mdl-grid">
+          <div class="mdl-cell mdl-cell--3-col mdl-cell--hide-phone"> </div>
+          <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-phone contact-form-header">
+            <p class="font_2">CONTACT</p><br>
+            <div class="contact-form-emil"><a class="font_7" href="mailto:info@minalmanani.com">info@minalmanani.com</a></div>
+          </div>
+          <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-phone contact-form-nav"> 
+            <div class="form-style">
+              <form method="POST" action="https://formspree.io/YOUREMAILHERE">
+                <input type="text" name="email" placeholder="Name *">
+                <input type="email" name="email" placeholder="Email *">
+                <input type="text" name="email" placeholder="Subject">
+                <textarea name="message" placeholder="Message"></textarea>
+                <button class="font_8" type="submit">Send</button>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
+      <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-phone"> </div>
     </div>
     <section class="footer-menu-section">
       <div class="mdl-grid mdl-cell--hide-phone">
@@ -68,6 +75,5 @@
       </div>
     </section>
     <script src="js/main.js"></script>
-    <script src="js/masonry_invoke.js"></script>
   </body>
 </html>

@@ -155,6 +155,8 @@ html {
   -ms-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out; }
+  .cd-primary-nav a {
+    color: white; }
 
 .cd-primary-nav li {
   font-size: 22px;
@@ -194,7 +196,7 @@ html {
   -o-transform: translateY(0);
   transform: translateY(0);
   padding-top: 80px;
-  z-index: 0; }
+  z-index: 1; }
 
 @media only screen and (min-width: 768px) {
   .cd-primary-nav {
