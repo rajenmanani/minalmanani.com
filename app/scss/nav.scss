@@ -1,7 +1,13 @@
+@import '../partials/variables'; // variables...
+
 body,
 html {
   height: 100%;
 }
+// .main-layout {
+//   z-index: $content-zindex;
+// 
+// }
 
 .overflow-hidden {
   /* when primary navigation is visible, the content in the background won't scroll */
@@ -31,7 +37,7 @@ html {
   background: transparent;
   height: 50px;
   width: 100%;
-  z-index: 2;
+  // z-index: $header-zindex;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
   box-shadow: none;
   -webkit-font-smoothing: antialiased;
@@ -60,6 +66,7 @@ html {
   height: 100%;
   width: 65px;
   background-color: transparent;
+  z-index: $content-zindex;
 }
 
 .cd-primary-nav-trigger .cd-menu-icon {
@@ -157,7 +164,7 @@ html {
   height: 100%;
   width: 100%;
   background: #2A2A2A;
-  z-index: -2;
+  z-index: $negative1-zindex;
   text-align: center;
   padding: 80px 0;
   -webkit-backface-visibility: hidden;
@@ -219,7 +226,7 @@ transition: all 0.3s ease-in-out;
   -o-transform: translateY(0);
   transform: translateY(0);
   padding-top: 80px;
-  z-index: 1;
+  z-index: auto;
   
 }
 

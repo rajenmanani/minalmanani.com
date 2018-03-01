@@ -1,4 +1,5 @@
-@import url( 'https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:100,300,400,700');
+@import '../partials/fonts'; // variables...
+// <------reset------->
 
 *,
 *:after,
@@ -7,36 +8,16 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+// <---- defaults ---->
 
-body,
-html {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
-  padding: 0;
-  margin: 0;
+.mdl-grid {
+  padding: 0 !important;
 }
-
-.clearfix:after,
-.clearfix:before {
-  content: " ";
-  display: table;
-}
-
-.clearfix:after {
-  clear: both;
-}
-
-img {
-  border: 0;
-  display: block;
-  width: 100%;
-}
+// <-------homepage masonry grid---------->
 
 .grid {
-  max-width: 69em;
-  list-style: none;
-  margin: 0 auto;
-  padding: 1;
+  // max-width: 100%;
+  // margin: 0 auto;  
 }
 
 .grid .item {
@@ -44,17 +25,30 @@ img {
   float: left;
   padding: 5px;
   width: 25%;
-  opacity: 1;
+  // opacity: 1;
 }
+// .grid .item a,
+// .grid .item a img {
+//   //could delete?
+//   outline: none;
+//   border: none;
+//   display: block;
+//   // end
+//   // width: 100%;
+// }
+// .clearfix:after,
+// .clearfix:before {
+//   content: " ";
+//   display: table;
+// }
+// .clearfix:after {
+//   clear: both;
+// }
 
-.grid .item a,
-.grid .item img {
-  //could delete?
-  outline: none;
-  border: none;
+img {
+  border: 0;
   display: block;
-  // end
-  max-width: 100%;
+  width: 100%;
 }
 
 .grid.effect-2 .item.animate {
@@ -80,11 +74,21 @@ img {
     opacity: 1;
   }
 }
-@media screen and (max-width: 840px) {
-  .grid .item {
-    width: 50%;
-  }
+
+.item:hover {
+  opacity: 0.3;
+  filter: alpha(opacity=70);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
+//  <--- common header ----->
+
+.common_header {
+  letter-spacing: 0.2em;
+  text-align: center;
+  margin: 35px 0;
+}
+// <---- for small screens ----->
 @media screen and (max-width: 480px) {
   .grid .item {
     width: 50%;
@@ -92,21 +96,22 @@ img {
   }
 
   .common_header {
-    text-align: left !important;
-    margin: 25px 0 !important;
+    text-align: left;
+    margin: 25px 0 17px;
     padding-left: 10px;
-    margin-bottom: 17px !important;
+    // margin-bottom: 17px !important;
   }
 
   .main-gallery {
     margin-top: 0 !important;
-    z-index: -3;
+    z-index: -1;
   }
 
   .contact-form-header {
     p {
       text-align: center;
     }
+    position: static !important;
   }
 
   .contact-form-emil {
@@ -116,7 +121,7 @@ img {
   }
 
   .contact-form-nav {
-    z-index: -3;
+    // z-index: $header-zindex;
   }
 
   .form-style {
@@ -127,89 +132,11 @@ img {
       padding: 5px;
       color: #808080;
       margin: 0 0 5px;
-      font: normal normal 100 14px/1.4em 'Roboto',sans-serif !important;
       line-height: 35px !important;
     }
   }
 }
-// my stylesheet
-
-.font_0 {
-  font: normal normal bold 24px/1.4em 'open sans',sans-serif;
-  color: #2A2A2A;
-}
-
-.font_1 {
-  font: normal normal bold 13px/1.4em 'open sans',sans-serif;
-  color: #FFFFFF;
-}
-
-.font_2 {
-  font: normal normal normal 20px/1.4em 'open sans',sans-serif;
-  color: #2A2A2A;
-}
-
-.font_3 {
-  font: normal normal normal 60px/1.4em 'Open Sans',sans-serif;
-  color: #2A2A2A;
-}
-
-.font_4 {
-  font: normal normal normal 35px/1.4em 'Open Sans',sans-serif;
-  color: #2A2A2A;
-}
-
-.font_5 {
-  font: normal normal normal 24px/1.4em 'open sans',sans-serif;
-  color: #2A2A2A;
-}
-
-.font_6 {
-  font: normal normal normal 19px/1.4em 'open sans',sans-serif;
-  color: #2A2A2A;
-}
-// .font_7 {
-//   font: normal normal bold 16px/1.4em din-next-w01-light,din-next-w02-light,din-next-w10-light,sans-serif;
-//   color: #2A2A2A;
-// }
-
-.font_7 {
-  font: normal normal 300 14px/1.4em 'Roboto',sans-serif;
-  color: #2A2A2A;
-}
-// .font_8 {
-//   font: normal normal normal 14px/1.4em din-next-w01-light,din-next-w02-light,din-next-w10-light,sans-serif;
-//   color: #2A2A2A;
-// }
-
-.font_8 {
-  font: normal normal 300 14px/1.4em 'Roboto',sans-serif;
-  color: #2A2A2A;
-}
-// .font_9 {
-//   font: normal normal 100 11px/1.4em din-next-w01-light,din-next-w02-light,din-next-w10-light,sans-serif;
-//   color: #2A2A2A;
-// }
-
-.font_9 {
-  font: normal normal 300 11px/1.4em 'Roboto',sans-serif;
-  color: #2A2A2A;
-}
-
-.font_10 {
-  font: normal normal normal 10px/1.4em din-next-w01-light,din-next-w02-light,din-next-w10-light,sans-serif;
-  color: #2A2A2A;
-}
-
-.common_header {
-  letter-spacing: 0.2em;
-  text-align: center;
-  margin: 35px 0;
-}
-
-.mdl-grid {
-  padding: 0 !important;
-}
+// <--- footer styles ---->
 
 .footer-menu-section {
   padding: 40px 0 0;
@@ -224,6 +151,21 @@ img {
 }
 
 .footer-menu_a {
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 5px 0;
+    text-align: center;
+  }
+
+  li {
+    display: inline-block;
+  }
+
+  li a {
+    padding: 0 30px;
+  }
+
   a {
     font-weight: bold;
     color: inherit !important;
@@ -236,28 +178,15 @@ img {
     transition: 0.5s;
   }
 
+  .selected {
+    color: #FFFFFF !important;
+  }
+
   a:hover {
     color: #FFFFFF !important;
   }
 }
-
-a {
-  text-decoration: none;
-}
-
-.footer-padding {
-  padding: 0 !important;
-}
-
-.item {
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-
-.item:hover {
-  opacity: 0.3;
-  filter: alpha(opacity=70);
-}
+// <--- contact form styles ----->
 
 .form-style {
   input,
@@ -268,6 +197,9 @@ a {
     color: #808080;
     margin: 0 0 5px;
     font: normal normal 100 13px/1.4em 'Roboto',sans-serif;
+    outline: none;
+    -webkit-appearance: none;
+    border-radius: 0;
   }
 
   textarea {
@@ -298,6 +230,10 @@ a {
   .contact-form-emil {
     p {
       letter-spacing: 0;
+    }
+
+    a {
+      text-decoration: none;
     }
   }
 }

@@ -1,32 +1,29 @@
 extends includes/layout.pug
-
   
 append css
   
 block content
-  include includes/mobile_nav.pug
   include includes/common_header.pug
-  .mdl-grid
-    .mdl-cell.mdl-cell--2-col.mdl-cell--hide-phone    
-    .mdl-cell.mdl-cell--8-col
-      .mdl-grid
-        .mdl-cell.mdl-cell--3-col.mdl-cell--hide-phone 
-        .mdl-cell.mdl-cell--3-col.mdl-cell--4-col-phone.contact-form-header
-          p.font_2 CONTACT
-          br
-          .contact-form-emil
-            a.font_7(href="mailto:info@minalmanani.com") info@minalmanani.com
-        .mdl-cell.mdl-cell--4-col.mdl-cell--4-col-phone.contact-form-nav 
-          .form-style
-            form(method='POST', action='https://formspree.io/YOUREMAILHERE')
-              input(type='text', name='email', placeholder='Name *')
-              input(type='email', name='email', placeholder='Email *')
-              input(type='text', name='email', placeholder='Subject')
-              textarea(name='message', placeholder='Message')
-              button.font_8(type='submit') Send
-    .mdl-cell.mdl-cell--2-col.mdl-cell--hide-phone 
-  //- .mdl-grid
-  //-   p.contact-extra-padding h
+  main.main-layout
+    .mdl-grid
+      .mdl-cell.mdl-cell--2-col.mdl-cell--hide-phone    
+      .mdl-cell.mdl-cell--8-col.mdl-cell--4-col-phone
+        .mdl-grid
+          .mdl-cell.mdl-cell--3-col.mdl-cell--hide-phone 
+          .mdl-cell.mdl-cell--3-col.mdl-cell--4-col-phone.contact-form-header
+            p.font_2 CONTACT
+            br
+            .contact-form-emil
+              a.font_7(href="mailto:info@minalmanani.com") info@minalmanani.com
+          .mdl-cell.mdl-cell--4-col.mdl-cell--4-col-phone.contact-form-nav 
+            .form-style.font_11
+              form(method='POST', action='https://formspree.io/YOUREMAILHERE')
+                input(type='text', name='email', placeholder='Name *')
+                input(type='email', name='email', placeholder='Email *')
+                input(type='text', name='email', placeholder='Subject')
+                textarea(name='message', placeholder='Message')
+                button.font_8(type='submit') Send
+      .mdl-cell.mdl-cell--2-col.mdl-cell--hide-phone 
 
 block bodyscripts           
-  script(src="js/main.js")
+  script(src="js/footer_nav.js")

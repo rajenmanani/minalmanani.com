@@ -1,0 +1,46 @@
+extends includes/layout2.pug
+
+append scripts
+  script(src='https://unpkg.com/imagesloaded@3/imagesloaded.pkgd.js')
+  script(src='js/masonry/masonry.pkgd.min.js')
+
+append css
+
+append content  
+  include includes/common_header.pug
+  .mdl-grid
+    .mdl-cell.mdl-cell--2-col.mdl-cell--hide-phone
+    .mdl-cell.mdl-cell--8-col.main-gallery
+      .grid.effect-2
+        .item
+          a(href='#')
+            img(src='images/8.jpg')
+        .item
+          a(href='#')
+            img(src='images/9.jpg')
+        .item
+          a(href='#')
+            img(src='images/1.jpg')
+        .item
+          a(href='#')
+            img(src='images/3.jpg')
+        .item
+          a(href='#')
+            img(src='images/6.png')
+        .item
+          a(href='#')
+            img(src='images/2.jpg')
+        .item
+          a(href='#')
+            img(src='images/4.jpg')
+        .item
+          a(href='#')
+            img(src='images/5.jpg')
+        .item
+          a(href='#')
+            img(src='images/7.jpg')
+    .mdl-cell.mdl-cell--2-col.mdl-cell--hide-phone
+        
+block bodyscripts
+  script(src='js/test.js')
+  script(src='js/footer_nav.js')

@@ -19,8 +19,8 @@ jQuery(document).ready(function($) {
 	//
 	//open/close primary navigation
 	$('.cd-primary-nav-trigger').on('click', function() {
-		if ($('.cd-primary-nav').css('opacity') == 0) $('.cd-primary-nav').css('opacity', 1);
-		else $('.cd-primary-nav').css('opacity', 0);
+		// if ($('.cd-primary-nav').css('opacity') == 0) $('.cd-primary-nav').css('opacity', 1);
+		// else $('.cd-primary-nav').css('opacity', 0);
     
 		$('.cd-menu-icon').toggleClass('is-clicked');
 		$('.cd-header').toggleClass('menu-is-open');
