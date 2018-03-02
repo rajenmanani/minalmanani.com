@@ -27,11 +27,7 @@
   font: normal normal normal 19px/1.4em 'open sans',sans-serif;
   color: #2A2A2A; }
 
-.font_7 {
-  font: normal normal 300 14px/1.4em 'Roboto',sans-serif;
-  color: #2A2A2A; }
-
-.font_8 {
+.font_7, .font_8 {
   font: normal normal 300 14px/1.4em 'Roboto',sans-serif;
   color: #2A2A2A; }
 
@@ -40,18 +36,20 @@
   color: #2A2A2A; }
 
 .font_10 {
-  font: normal normal normal 10px/1.4em din-next-w01-light,din-next-w02-light,din-next-w10-light,sans-serif;
+  font: normal normal normal 10px/1.4em 'Roboto',sans-serif;
   color: #2A2A2A; }
 
 .font_11 {
   font: normal normal 100 14px/1.4em 'Roboto',sans-serif; }
 
-*,
-*:after,
-*:before {
+* {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
+  *:after, *:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
 
 .mdl-grid {
   padding: 0 !important; }
@@ -120,8 +118,12 @@ img {
     border: 1px solid #2a2a2a;
     padding: 5px;
     color: #808080;
-    margin: 0 0 5px;
-    line-height: 35px !important; } }
+    margin: 0 0 15px !important;
+    line-height: 35px !important;
+    font-size: 16px !important; }
+  button {
+    padding: 5px 15px !important;
+    font-weight: 400 !important; } }
 
 .footer-menu-section {
   padding: 40px 0 0; }
@@ -141,9 +143,8 @@ img {
 
 .footer-menu_a li {
   display: inline-block; }
-
-.footer-menu_a li a {
-  padding: 0 30px; }
+  .footer-menu_a li a {
+    padding: 0 30px; }
 
 .footer-menu_a a {
   font-weight: bold;
@@ -156,14 +157,11 @@ img {
   /* ...and now for the proper property */
   transition: 0.5s; }
 
-.footer-menu_a .selected {
-  color: #FFFFFF !important; }
-
+.footer-menu_a .selected,
 .footer-menu_a a:hover {
   color: #FFFFFF !important; }
 
-.form-style input,
-.form-style textarea {
+.form-style input {
   width: 100%;
   border: 1px solid #2a2a2a;
   padding: 5px;
@@ -174,7 +172,26 @@ img {
   -webkit-appearance: none;
   border-radius: 0; }
 
+.form-style .error {
+  border: 1px solid #ed1c24; }
+
+.form-style .err-msg {
+  width: 80%;
+  display: inline-block;
+  color: #ed1c24;
+  font-weight: 300;
+  font-size: 16px; }
+
 .form-style textarea {
+  width: 100%;
+  border: 1px solid #2a2a2a;
+  padding: 5px;
+  color: #808080;
+  margin: 0 0 5px;
+  font: normal normal 100 13px/1.4em 'Roboto',sans-serif;
+  outline: none;
+  -webkit-appearance: none;
+  border-radius: 0;
   min-height: 115px;
   resize: none; }
 

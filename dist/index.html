@@ -5,62 +5,67 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="js/main.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@3/imagesloaded.pkgd.js"></script>
     <link rel="stylesheet" href="css/styles.min.css">
   </head>
   <body>
-    <header class="cd-header">
-      <!-- cd-nav--><a class="cd-primary-nav-trigger" href="#0"><span class="cd-menu-icon"></span></a>
-      <!-- cd-primary-nav-trigger-->
-    </header>
-    <nav>
-      <ul class="cd-primary-nav">
-        <li class="font_1"><a href="#0">portfolio</a></li>
-        <div class="menu_separator"></div>
-        <li class="font_1"><a href="#0">about</a></li>
-        <div class="menu_separator"></div>
-        <li class="font_1"><a href="#0">contact</a></li>
-      </ul>
-    </nav>
-    <div class="mdl-grid">
-      <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-phone"></div>
-      <div class="mdl-cell mdl-cell--8-col">
-        <h1 class="font_0 common_header">MINAL MANANI</h1>
-      </div>
-    </div>
-    <div class="mdl-grid">
-      <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-phone"></div>
-      <div class="mdl-cell mdl-cell--8-col main-gallery">
-        <div class="grid effect-2" id="grid">
-          <div class="item"><a href="#"><img src="images/8.jpg"></a></div>
-          <div class="item"><a href="#"><img src="images/9.jpg"></a></div>
-          <div class="item"><a href="#"><img src="images/1.jpg"></a></div>
-          <div class="item"><a href="#"><img src="images/3.jpg"></a></div>
-          <div class="item"><a href="#"><img src="images/6.png"></a></div>
-          <div class="item"><a href="#"><img src="images/2.jpg"></a></div>
-          <div class="item"><a href="#"><img src="images/4.jpg"></a></div>
-          <div class="item"><a href="#"><img src="images/5.jpg"></a></div>
-          <div class="item"><a href="#"><img src="images/7.jpg"></a></div>
+    <header>
+      <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-phone"></div>
+        <div class="mdl-cell mdl-cell--8-col mdl-cell--3-col-phone">
+          <h1 class="font_0 common_header">MINAL MANANI</h1>
         </div>
+        <div class="mdl-cell mdl-cell--1-col-phone mdl-cell--hide-desktop menu-icon-holder">
+          <div class="menu-icon"></div>
+        </div>
+        <nav>
+          <ul class="primary-nav">
+            <li class="font_1"><a href="/">portfolio</a></li>
+            <div class="menu_separator"></div>
+            <li class="font_1"><a href="/about.html">about</a></li>
+            <div class="menu_separator"></div>
+            <li class="font_1"><a href="/contact.html">contact</a></li>
+          </ul>
+        </nav>
       </div>
-    </div>
-    <section class="footer-menu-section">
+    </header>
+    <main>
+      <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-phone"></div>
+        <div class="mdl-cell mdl-cell--8-col main-gallery">
+          <div class="grid effect-2">
+            <div class="item"><a href="#"><img src="images/8.jpg"></a></div>
+            <div class="item"><a href="#"><img src="images/9.jpg"></a></div>
+            <div class="item"><a href="#"><img src="images/1.jpg"></a></div>
+            <div class="item"><a href="#"><img src="images/3.jpg"></a></div>
+            <div class="item"><a href="#"><img src="images/6.png"></a></div>
+            <div class="item"><a href="#"><img src="images/2.jpg"></a></div>
+            <div class="item"><a href="#"><img src="images/4.jpg"></a></div>
+            <div class="item"><a href="#"><img src="images/5.jpg"></a></div>
+            <div class="item"><a href="#"><img src="images/7.jpg"></a></div>
+          </div>
+        </div>
+        <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-phone"></div>
+      </div>
+    </main>
+    <footer class="footer-menu-section">
       <div class="mdl-grid mdl-cell--hide-phone">
         <div class="mdl-cell mdl-cell--2-col"></div>
-        <div class="mdl-cell mdl-cell--8-col footer-menu">
-          <div class="mdl-grid mdl-grid--nesting mdl-typography--text-center footer-padding">
-            <div class="mdl-cell mdl-cell--3-col"></div>
-            <div class="mdl-cell mdl-cell--2-col footer-menu_a"><a href="#">portfolio</a></div>
-            <div class="mdl-cell mdl-cell--2-col footer-menu_a"><a href="#">about</a></div>
-            <div class="mdl-cell mdl-cell--2-col footer-menu_a"><a href="#">contact</a></div>
-          </div>
+        <div class="mdl-cell mdl-cell--8-col footer-menu footer-menu_a">
+          <ul>
+            <li><a class="font_1" href="/">portfolio</a></li>
+            <li><a class="font_1" href="/about.html">about</a></li>
+            <li>       <a class="font_1" href="/contact.html">contact</a></li>
+          </ul>
         </div>
       </div>
       <div class="mdl-grid">
-        <div class="mdl-cell mdl-cell--12-col">
+        <div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-phone">
           <p class="font_9 mdl-typography--text-center"> © 2018 Minal Manani Limited</p>
         </div>
       </div>
-    </section>
-    <script src="js/main.js"></script>
+    </footer>
+    <script src="js/masonry_invoke.js"></script>
+    <script src="js/footer_nav.js"></script>
   </body>
 </html>

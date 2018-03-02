@@ -1,23 +1,20 @@
-@import '../partials/fonts'; // variables...
-// <------reset------->
+@import "../partials/fonts";
 
-*,
-*:after,
-*:before {
+* {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+
+  &:after,
+  &:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
 }
-// <---- defaults ---->
 
 .mdl-grid {
   padding: 0 !important;
-}
-// <-------homepage masonry grid---------->
-
-.grid {
-  // max-width: 100%;
-  // margin: 0 auto;  
 }
 
 .grid .item {
@@ -25,25 +22,7 @@
   float: left;
   padding: 5px;
   width: 25%;
-  // opacity: 1;
 }
-// .grid .item a,
-// .grid .item a img {
-//   //could delete?
-//   outline: none;
-//   border: none;
-//   display: block;
-//   // end
-//   // width: 100%;
-// }
-// .clearfix:after,
-// .clearfix:before {
-//   content: " ";
-//   display: table;
-// }
-// .clearfix:after {
-//   clear: both;
-// }
 
 img {
   border: 0;
@@ -77,18 +56,16 @@ img {
 
 .item:hover {
   opacity: 0.3;
-  filter: alpha(opacity=70);
+  filter: alpha(opacity = 70);
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-//  <--- common header ----->
 
 .common_header {
   letter-spacing: 0.2em;
   text-align: center;
   margin: 35px 0;
 }
-// <---- for small screens ----->
 @media screen and (max-width: 480px) {
   .grid .item {
     width: 50%;
@@ -99,7 +76,6 @@ img {
     text-align: left;
     margin: 25px 0 17px;
     padding-left: 10px;
-    // margin-bottom: 17px !important;
   }
 
   .main-gallery {
@@ -108,35 +84,35 @@ img {
   }
 
   .contact-form-header {
+    position: static !important;
+
     p {
       text-align: center;
     }
-    position: static !important;
   }
 
-  .contact-form-emil {
-    a {
-      font-size: 16px;
-    }
-  }
-
-  .contact-form-nav {
-    // z-index: $header-zindex;
+  .contact-form-emil a {
+    font-size: 16px;
   }
 
   .form-style {
     input,
     textarea {
       width: 100%;
-      border: 1px solid rgba(42, 42, 42, 1);
+      border: 1px solid #2a2a2a;
       padding: 5px;
       color: #808080;
-      margin: 0 0 5px;
+      margin: 0 0 15px !important;
       line-height: 35px !important;
+      font-size: 16px !important;
     }
   }
+
+  button {
+    padding: 5px 15px !important;
+    font-weight: 400 !important;
+  }
 }
-// <--- footer styles ---->
 
 .footer-menu-section {
   padding: 40px 0 0;
@@ -160,10 +136,10 @@ img {
 
   li {
     display: inline-block;
-  }
 
-  li a {
-    padding: 0 30px;
+    a {
+      padding: 0 30px;
+    }
   }
 
   a {
@@ -178,21 +154,16 @@ img {
     transition: 0.5s;
   }
 
-  .selected {
-    color: #FFFFFF !important;
-  }
-
+  .selected,
   a:hover {
     color: #FFFFFF !important;
   }
 }
-// <--- contact form styles ----->
 
 .form-style {
-  input,
-  textarea {
+  input {
     width: 100%;
-    border: 1px solid rgba(42, 42, 42, 1);
+    border: 1px solid #2a2a2a;
     padding: 5px;
     color: #808080;
     margin: 0 0 5px;
@@ -202,13 +173,34 @@ img {
     border-radius: 0;
   }
 
+  .error {
+    border: 1px solid rgba(237, 28, 36,1);
+  }
+
+  .err-msg {
+    width: 80%;
+    display: inline-block;
+    color: rgba(237, 28, 36,1);
+    font-weight: 300;
+    font-size: 16px;
+  }
+
   textarea {
+    width: 100%;
+    border: 1px solid #2a2a2a;
+    padding: 5px;
+    color: #808080;
+    margin: 0 0 5px;
+    font: normal normal 100 13px/1.4em 'Roboto',sans-serif;
+    outline: none;
+    -webkit-appearance: none;
+    border-radius: 0;
     min-height: 115px;
     resize: none;
   }
 
   button {
-    background-color: rgba(42, 42, 42, 1);
+    background-color: #2a2a2a;
     border: 0;
     color: #FFFFFF;
     cursor: pointer;

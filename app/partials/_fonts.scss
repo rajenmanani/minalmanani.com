@@ -1,5 +1,4 @@
-@import url( 'https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:100,300,400,700');
-
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:100,300,400,700");
 
 .font_0 {
   font: normal normal bold 24px/1.4em 'open sans',sans-serif;
@@ -35,28 +34,11 @@
   font: normal normal normal 19px/1.4em 'open sans',sans-serif;
   color: #2A2A2A;
 }
-// .font_7 {
-//   font: normal normal bold 16px/1.4em din-next-w01-light,din-next-w02-light,din-next-w10-light,sans-serif;
-//   color: #2A2A2A;
-// }
 
-.font_7 {
+.font_7, .font_8 {
   font: normal normal 300 14px/1.4em 'Roboto',sans-serif;
   color: #2A2A2A;
 }
-// .font_8 {
-//   font: normal normal normal 14px/1.4em din-next-w01-light,din-next-w02-light,din-next-w10-light,sans-serif;
-//   color: #2A2A2A;
-// }
-
-.font_8 {
-  font: normal normal 300 14px/1.4em 'Roboto',sans-serif;
-  color: #2A2A2A;
-}
-// .font_9 {
-//   font: normal normal 100 11px/1.4em din-next-w01-light,din-next-w02-light,din-next-w10-light,sans-serif;
-//   color: #2A2A2A;
-// }
 
 .font_9 {
   font: normal normal 300 11px/1.4em 'Roboto',sans-serif;
@@ -64,11 +46,10 @@
 }
 
 .font_10 {
-  font: normal normal normal 10px/1.4em din-next-w01-light,din-next-w02-light,din-next-w10-light,sans-serif;
+  font: normal normal normal 10px/1.4em 'Roboto',sans-serif;
   color: #2A2A2A;
 }
 
 .font_11 {
   font: normal normal 100 14px/1.4em 'Roboto',sans-serif;
-  
 }

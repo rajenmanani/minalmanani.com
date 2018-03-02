@@ -1,8 +1,10 @@
 extends includes/layout.pug
 
 append scripts
-  script(src='https://unpkg.com/imagesloaded@3/imagesloaded.pkgd.js')
   script(src='js/masonry/masonry.pkgd.min.js')
+  
+block nb-scripts
+  script(src='https://unpkg.com/imagesloaded@3/imagesloaded.pkgd.js')
 
 append css
 
