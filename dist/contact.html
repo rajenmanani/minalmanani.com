@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="js/main.min.js"></script>
-    <script src="https://unpkg.com/imagesloaded@3/imagesloaded.pkgd.js"></script>
     <link rel="stylesheet" href="css/styles.min.css">
   </head>
   <body>
@@ -29,23 +28,30 @@
         </nav>
       </div>
     </header>
-    <main>
+    <main class="main-layout">
       <div class="mdl-grid">
-        <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-phone"></div>
-        <div class="mdl-cell mdl-cell--8-col main-gallery">
-          <div class="grid effect-2">
-            <div class="item"><a href="#"><img src="images/8.jpg"></a></div>
-            <div class="item"><a href="#"><img src="images/9.jpg"></a></div>
-            <div class="item"><a href="#"><img src="images/1.jpg"></a></div>
-            <div class="item"><a href="#"><img src="images/3.jpg"></a></div>
-            <div class="item"><a href="#"><img src="images/6.png"></a></div>
-            <div class="item"><a href="#"><img src="images/2.jpg"></a></div>
-            <div class="item"><a href="#"><img src="images/4.jpg"></a></div>
-            <div class="item"><a href="#"><img src="images/5.jpg"></a></div>
-            <div class="item"><a href="#"><img src="images/7.jpg"></a></div>
+        <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-phone">   </div>
+        <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-phone">
+          <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--3-col mdl-cell--hide-phone"> </div>
+            <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-phone contact-form-header">
+              <p class="font_2">CONTACT</p><br>
+              <div class="contact-form-emil"><a class="font_7" href="mailto:info@minalmanani.com">info@minalmanani.com</a></div>
+            </div>
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-phone contact-form-nav"> 
+              <div class="form-style font_11">
+                <form method="POST" action="https://formspree.io/YOUREMAILHERE">
+                  <input type="text" name="email" placeholder="Name *">
+                  <input type="email" name="email" placeholder="Email *">
+                  <input type="text" name="email" placeholder="Subject">
+                  <textarea name="message" placeholder="Message"></textarea>
+                  <button class="font_8" type="submit">Send</button>
+                </form>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-phone"></div>
+        <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-phone"> </div>
       </div>
     </main>
     <footer class="footer-menu-section">
@@ -65,7 +71,6 @@
         </div>
       </div>
     </footer>
-    <script src="js/masonry_invoke.js"></script>
     <script src="js/footer_nav.js"></script>
   </body>
 </html>

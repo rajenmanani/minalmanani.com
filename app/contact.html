@@ -7,9 +7,8 @@
     <!-- build:js js/main.min.js-->
     <script src="js/mdl/material.min.js"></script>
     <script src="js/jquery/3.3.1/jquery.min.js"></script>
-    <script src="js/masonry/masonry.pkgd.min.js"></script>
     <!--  endbuild-->
-    <script src="https://unpkg.com/imagesloaded@3/imagesloaded.pkgd.js"></script>
+    <script src="js/jquery-validate/jquery.validate.min.js"></script>
     <!-- build:css css/styles.min.css-->
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/navs.css">
@@ -38,23 +37,33 @@
         </nav>
       </div>
     </header>
-    <main>
+    <main class="main-layout">
       <div class="mdl-grid">
-        <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-phone"></div>
-        <div class="mdl-cell mdl-cell--8-col main-gallery">
-          <div class="grid effect-2">
-            <div class="item"><a href="#"><img src="images/8.jpg"></a></div>
-            <div class="item"><a href="#"><img src="images/9.jpg"></a></div>
-            <div class="item"><a href="#"><img src="images/1.jpg"></a></div>
-            <div class="item"><a href="#"><img src="images/3.jpg"></a></div>
-            <div class="item"><a href="#"><img src="images/6.png"></a></div>
-            <div class="item"><a href="#"><img src="images/2.jpg"></a></div>
-            <div class="item"><a href="#"><img src="images/4.jpg"></a></div>
-            <div class="item"><a href="#"><img src="images/5.jpg"></a></div>
-            <div class="item"><a href="#"><img src="images/7.jpg"></a></div>
+        <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-phone">   </div>
+        <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-phone">
+          <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--3-col mdl-cell--hide-phone"> </div>
+            <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-phone contact-form-header">
+              <p class="font_2">CONTACT</p><br>
+              <div class="contact-form-emil"><a class="font_7" href="mailto:info@minalmanani.com">info@minalmanani.com</a></div>
+            </div>
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-phone contact-form-nav"> 
+              <div class="form-style font_11">
+                <form id="contact-form" method="POST" action="https://formspree.io/YOUREMAILHERE">
+                  <input type="text" name="name" placeholder="Name *" title="please provide your name" required>
+                  <input type="email" name="email" placeholder="Email *" title="please provide a valid email" required>
+                  <input type="text" name="subject" placeholder="Subject">
+                  <textarea name="message" placeholder="Message *" title="please send me a message" required></textarea>
+                  <div class="err">
+                    <div class="err-msg"></div>
+                    <button class="font_8" type="submit">Send</button>
+                  </div>
+                </form>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-phone"></div>
+        <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-phone"> </div>
       </div>
     </main>
     <footer class="footer-menu-section">
@@ -74,7 +83,7 @@
         </div>
       </div>
     </footer>
-    <script src="js/masonry_invoke.js"></script>
     <script src="js/footer_nav.js"></script>
+    <script src="js/form-validate.js"></script>
   </body>
 </html>
