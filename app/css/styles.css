@@ -54,6 +54,9 @@
 .mdl-grid {
   padding: 0 !important; }
 
+.grid-sizer {
+  width: 25%; }
+
 .grid .item {
   display: block;
   float: left;
@@ -99,6 +102,8 @@ img {
   .grid .item {
     width: 50%;
     padding: 10px; }
+  .grid-sizer {
+    width: 50%; }
   .common_header {
     text-align: left;
     margin: 25px 0 17px;
@@ -217,3 +222,7 @@ img {
 
 .contact-extra-padding {
   padding-top: 130px; }
+
+.show-more {
+  text-decoration: underline;
+  font-weight: 400; }
