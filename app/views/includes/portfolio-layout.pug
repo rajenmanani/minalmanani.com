@@ -1,0 +1,34 @@
+extends layout.pug
+
+append scripts
+  
+block nb-scripts
+  script(src='/js/simplelightbox/simple-lightbox.min.js')
+
+append css
+  link(rel='stylesheet', type="text/css", href='/css/simplelightbox/simplelightbox.css')
+
+append content  
+  include common_header.pug
+  main
+
+    .mdl-grid
+      .mdl-cell.mdl-cell--2-col.mdl-cell--hide-phone.mdl-cell--hide-tablet
+      .mdl-cell.mdl-cell--5-col.mdl-cell--4-col-phone.gallery
+        block main
+      .mdl-cell.mdl-cell--3-col.mdl-cell--4-col-phone.portfolio-page
+        p.font_2.about-header 
+          block portfolio-title
+        .about-body.font_7
+          block portfolio-body
+            .portfolio-btn-wrapper
+              //- button.portfolio-btn.font_8(type=button) Back
+              a.portfolio-btn.font_8(href='/') Back
+
+      .mdl-cell.mdl-cell--2-col.mdl-cell--hide-phone.mdl-cell--hide-tablet
+      //- .mdl-cell.mdl-cell--2-col.mdl-cell--hide-phone 
+      //- .mdl-cell.mdl-cell--4-col-phone.mdl-cell--hide-desktop.mdl-cell--order-3-phone
+        //- button.portfolio-btn-phone.font_8(type=button) Back
+block bodyscripts
+  script(src='/js/projectGallery.js')
+  script(src='/js/footer_nav.js')

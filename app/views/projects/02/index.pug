@@ -1,0 +1,18 @@
+extends ../../includes/portfolio-layout.pug
+
+prepend title
+  title Project | Minal Manani
+
+block main
+  a(href='/images/1.jpg')
+    img.project-img(src="/images/1.jpg")
+  a(href='/images/2.jpg')
+    img.project-img(src="/images/2.jpg")
+  a(href='/images/3.jpg')
+    img.project-img(src="/images/3.jpg")   
+  
+block portfolio-title
+  | PROJECT 2 
+  
+prepend portfolio-body
+  include:markdown-it about.md

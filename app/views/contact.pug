@@ -1,4 +1,7 @@
 extends includes/layout.pug
+
+prepend title
+  title Contact | Minal Manani
   
 append nb-scripts
   script(src='js/jquery-validate/jquery.validate.min.js')
@@ -10,26 +13,28 @@ block content
   include includes/common_header.pug
   main.main-layout
     .mdl-grid
-      .mdl-cell.mdl-cell--2-col.mdl-cell--hide-phone    
-      .mdl-cell.mdl-cell--8-col.mdl-cell--4-col-phone
+      .mdl-cell.mdl-cell--2-col.mdl-cell--hide-phone.mdl-cell--hide-tablet   
+      .mdl-cell.mdl-cell--8-col.mdl-cell--4-col-phone.mdl-cell--8-col-tablet
         .mdl-grid
-          .mdl-cell.mdl-cell--3-col.mdl-cell--hide-phone 
-          .mdl-cell.mdl-cell--3-col.mdl-cell--4-col-phone.contact-form-header
+          .mdl-cell.mdl-cell--3-col.mdl-cell--hide-phone.mdl-cell--hide-tablet
+          .mdl-cell.mdl-cell--3-col.mdl-cell--4-col-phone.mdl-cell--4-col-tablet.contact-form-header
             p.font_2 CONTACT
             br
             .contact-form-emil
               a.font_7(href="mailto:info@minalmanani.com") info@minalmanani.com
-          .mdl-cell.mdl-cell--4-col.mdl-cell--4-col-phone.contact-form-nav 
+          .mdl-cell.mdl-cell--4-col.mdl-cell--4-col-phone.mdl-cell--4-col-tablet.contact-form-nav 
             .form-style.font_11
-              form#contact-form(method='POST', action='https://formspree.io/YOUREMAILHERE')
+              form#contact-form(method='POST', action='https://formspree.io/rajen.manani@gmail.com')
                 input(type='text', name='name', placeholder='Name *' title='please provide your name' required)
                 input(type='email', name='email', placeholder='Email *' title='please provide a valid email' required)
-                input(type='text', name='subject', placeholder='Subject')
+                input(type='text', name='_subject', placeholder='Subject')
                 textarea(name='message', placeholder='Message *' title='please send me a message' required)
+                input(type="text", name="_gotcha", style="display:none")
+                input(type="hidden", name="_next", value="//example.com")
                 .err
                   .err-msg
                   button.font_8(type='submit') Send
-      .mdl-cell.mdl-cell--2-col.mdl-cell--hide-phone 
+      .mdl-cell.mdl-cell--2-col.mdl-cell--hide-phone.mdl-cell--hide-tablet
 
 block bodyscripts           
   script(src="js/footer_nav.js")

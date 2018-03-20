@@ -1,21 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics-->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-115957213-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-115957213-1');
+    </script>
+    <title>Contact | Minal Manani</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="js/main.min.js"></script>
+    <script src="/js/main.min.js"></script>
     <script src="js/jquery-validate/jquery.validate.min.js"></script>
     <link rel="stylesheet" href="css/styles.min.css">
   </head>
   <body>
     <header>
       <div class="mdl-grid">
-        <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-phone"></div>
+        <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-phone mdl-cell--hide-tablet"></div>
         <div class="mdl-cell mdl-cell--8-col mdl-cell--3-col-phone">
-          <h1 class="font_0 common_header">MINAL MANANI</h1>
+          <div class="common_header"><a class="font_0 banner" href="/">MINAL MANANI</a></div>
         </div>
-        <div class="mdl-cell mdl-cell--1-col-phone mdl-cell--hide-desktop menu-icon-holder">
+        <div class="mdl-cell mdl-cell--1-col-phone mdl-cell--hide-tablet mdl-cell--hide-desktop menu-icon-holder">
           <div class="menu-icon"></div>
         </div>
         <nav>
@@ -31,21 +40,23 @@
     </header>
     <main class="main-layout">
       <div class="mdl-grid">
-        <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-phone">   </div>
-        <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-phone">
+        <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-phone mdl-cell--hide-tablet">  </div>
+        <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-phone mdl-cell--8-col-tablet">
           <div class="mdl-grid">
-            <div class="mdl-cell mdl-cell--3-col mdl-cell--hide-phone"> </div>
-            <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-phone contact-form-header">
+            <div class="mdl-cell mdl-cell--3-col mdl-cell--hide-phone mdl-cell--hide-tablet"></div>
+            <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-phone mdl-cell--4-col-tablet contact-form-header">
               <p class="font_2">CONTACT</p><br>
               <div class="contact-form-emil"><a class="font_7" href="mailto:info@minalmanani.com">info@minalmanani.com</a></div>
             </div>
-            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-phone contact-form-nav"> 
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-phone mdl-cell--4-col-tablet contact-form-nav"> 
               <div class="form-style font_11">
-                <form id="contact-form" method="POST" action="https://formspree.io/YOUREMAILHERE">
+                <form id="contact-form" method="POST" action="https://formspree.io/rajen.manani@gmail.com">
                   <input type="text" name="name" placeholder="Name *" title="please provide your name" required>
                   <input type="email" name="email" placeholder="Email *" title="please provide a valid email" required>
-                  <input type="text" name="subject" placeholder="Subject">
+                  <input type="text" name="_subject" placeholder="Subject">
                   <textarea name="message" placeholder="Message *" title="please send me a message" required></textarea>
+                  <input type="text" name="_gotcha" style="display:none;">
+                  <input type="hidden" name="_next" value="//example.com">
                   <div class="err">
                     <div class="err-msg"></div>
                     <button class="font_8" type="submit">Send</button>
@@ -55,7 +66,7 @@
             </div>
           </div>
         </div>
-        <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-phone"> </div>
+        <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-phone mdl-cell--hide-tablet"></div>
       </div>
     </main>
     <footer class="footer-menu-section">

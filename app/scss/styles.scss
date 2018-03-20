@@ -58,7 +58,8 @@ img {
   }
 }
 
-.item:hover {
+.item:hover,
+a img:hover {
   opacity: 0.3;
   filter: alpha(opacity = 70);
   -webkit-transition: all 0.3s ease;
@@ -70,15 +71,34 @@ img {
   text-align: center;
   margin: 35px 0;
 }
+
+.banner {
+  text-decoration: none;
+}
+
+//tablet view or landscape
+@media screen and (max-width: 840px) {
+  .contact-form-header {
+    // position: static !important;
+    p {
+      text-align: center;
+    }
+  }
+  .contact-form-emil {
+  text-align: center;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .grid .item {
     width: 50%;
     padding: 10px;
   }
+
   .grid-sizer {
     width: 50%;
   }
-  
+
   .common_header {
     text-align: left;
     margin: 25px 0 17px;
@@ -96,6 +116,29 @@ img {
     p {
       text-align: center;
     }
+  }
+
+  .about-page {
+    padding: 0 10px !important;
+  }
+
+  .portfolio-page {
+    padding: 0 10px !important;
+  }
+
+  .about-img {
+    padding: 0 10px !important;
+    width: 100%;
+  }
+
+  .project-img {
+    padding: 0 10px !important;
+    width: 100%;
+  }
+
+  .about-header {
+    text-align: center;
+    padding-left: 0 !important;
   }
 
   .contact-form-emil a {
@@ -116,10 +159,34 @@ img {
   }
 
   button {
-    padding: 5px 15px !important;
+    // padding: 5px 15px !important;
     font-weight: 400 !important;
   }
+
+  .portfolio-btn {
+    // display: none;
+    // margin: 0 auto !important;
+    // text-align: center;
+    font-size: 16px !important;
+    padding: 10px 15px !important;
+    // margin-top: 30px !important;
+  }
+
+  .portfolio-btn-wrapper {
+    text-align: center;
+    padding-top: 30px;
+  }
+  
+  .item:hover,
+  a img:hover {
+    opacity: 1;
+    filter: alpha(opacity = 70);
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  
 }
+
 
 .footer-menu-section {
   padding: 40px 0 0;
@@ -214,7 +281,7 @@ img {
     float: right;
     margin: 0;
     max-width: 35%;
-    padding: 5px;
+    padding: 10px 15px;
   }
 }
 
@@ -241,7 +308,138 @@ img {
   padding-top: 130px;
 }
 
+.about-page {
+  z-index: -1;
+  position: relative;
+  top: 9px;
+  padding-left: 8px;
+
+  p {
+    letter-spacing: 4px;
+  }
+
+  .about-body {
+    p {
+      letter-spacing: 0.5px;
+      line-height: 24px;
+      font-weight: 300;
+      font-size: 15px;
+    }
+  }
+}
+
 .show-more {
   text-decoration: underline;
   font-weight: 400;
+}
+
+.about-img {
+  width: 100%;
+}
+
+.project-img {
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.gallery-icon {
+  padding-right: 8px;
+  /* this span is the central line of the menu icon */
+  display: inline-block;
+  position: relative;
+  float: right;
+  top: 53%;
+  bottom: auto;
+  right: auto;
+  width: 25px;
+  height: 3px;
+  background-color: transparent;
+  /* these are the upper and lower lines in the menu icon */
+  &::after,
+  &::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #2a2a2a;
+    right: 0;
+  }
+
+  &::before {
+    background-color: #fff;
+    top: 0;
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    transform: rotate(135deg);
+  }
+
+  &::after {
+    background-color: #fff;
+    top: 0;
+    -webkit-transform: rotate(225deg);
+    -moz-transform: rotate(225deg);
+    -ms-transform: rotate(225deg);
+    -o-transform: rotate(225deg);
+  }
+
+  &:hover::after,
+  &:hover::before {
+    background-color: #2AA8CC;
+  }
+}
+
+.portfolio-btn {
+  background-color: #2a2a2a;
+  border: 0;
+  color: #FFFFFF;
+  cursor: pointer !important;
+  margin: 0;
+  padding: 10px 15px;
+  font-size: 14px;
+  position: absolute;
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.3;
+    filter: alpha(opacity = 70);
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+}
+// .portfolio-btn-phone {
+//   background-color: #2a2a2a;
+//   border: 0;
+//   color: #FFFFFF;
+//   cursor: pointer !important;
+//   margin: 0;
+//   padding: 10px 15px;
+//   font-size: 14px;
+// 
+//   &:hover {
+//     opacity: 0.3;
+//     filter: alpha(opacity = 70);
+//     -webkit-transition: all 0.3s ease;
+//     transition: all 0.3s ease;
+//   }
+// }
+
+.portfolio-page {
+  position: relative;
+  top: 9px;
+  padding-left: 8px;
+
+  p {
+    letter-spacing: 4px;
+  }
+
+  .about-body {
+    p {
+      letter-spacing: 0.5px;
+      line-height: 24px;
+      font-weight: 300;
+      font-size: 15px;
+    }
+  }
 }

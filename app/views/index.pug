@@ -1,5 +1,8 @@
 extends includes/layout.pug
 
+prepend title
+  title Home | Minal Manani
+
 append scripts
   script(src='js/masonry/masonry.pkgd.min.js')
   
@@ -12,9 +15,9 @@ append content
   include includes/common_header.pug
   main
     .mdl-grid
-      .mdl-cell.mdl-cell--2-col.mdl-cell--hide-phone
+      .mdl-cell.mdl-cell--2-col.mdl-cell--hide-phone.mdl-cell--hide-tablet
       .mdl-cell.mdl-cell--8-col.main-gallery
-        .grid.effect-2
+        .grid
           .grid-sizer
           .item
             a(href='#')
@@ -45,8 +48,9 @@ append content
               img(src='images/7.jpg')
       .mdl-cell.mdl-cell--2-col.mdl-cell--hide-phone
     .mdl-grid
-      .mdl-cell.mdl-cell--4-col-phone.mdl-cell--hide-desktop
+      .mdl-cell.mdl-cell--4-col-phone.mdl-cell--hide-tablet.mdl-cell--hide-desktop
         .show-more.font_8.mdl-typography--text-center Show More
 block bodyscripts
-  script(src='js/masonry_invoke.js')
+  script(src='js/masonry_invoke.js') 
   script(src='js/footer_nav.js')
+  //script(src='js/test.js') 

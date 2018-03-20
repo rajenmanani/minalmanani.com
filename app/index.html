@@ -1,30 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics-->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-115957213-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-115957213-1');
+    </script>
+    <title>Home | Minal Manani</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- build:js js/main.min.js-->
-    <script src="js/mdl/material.min.js"></script>
-    <script src="js/jquery/3.3.1/jquery.min.js"></script>
+    <!-- build:js /js/main.min.js-->
+    <script src="/js/mdl/material.min.js"></script>
+    <script src="/js/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/masonry/masonry.pkgd.min.js"></script>
     <!--  endbuild-->
     <script src="https://unpkg.com/imagesloaded@3/imagesloaded.pkgd.js"></script>
     <!-- build:css css/styles.min.css-->
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/navs.css">
-    <link rel="stylesheet" href="css/mdl/material.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/navs.css">
+    <link rel="stylesheet" href="/css/mdl/material.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <!-- endbuild-->
   </head>
   <body>
     <header>
       <div class="mdl-grid">
-        <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-phone"></div>
+        <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-phone mdl-cell--hide-tablet"></div>
         <div class="mdl-cell mdl-cell--8-col mdl-cell--3-col-phone">
-          <h1 class="font_0 common_header">MINAL MANANI</h1>
+          <div class="common_header"><a class="font_0 banner" href="/">MINAL MANANI</a></div>
         </div>
-        <div class="mdl-cell mdl-cell--1-col-phone mdl-cell--hide-desktop menu-icon-holder">
+        <div class="mdl-cell mdl-cell--1-col-phone mdl-cell--hide-tablet mdl-cell--hide-desktop menu-icon-holder">
           <div class="menu-icon"></div>
         </div>
         <nav>
@@ -40,9 +49,9 @@
     </header>
     <main>
       <div class="mdl-grid">
-        <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-phone"></div>
+        <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-phone mdl-cell--hide-tablet"></div>
         <div class="mdl-cell mdl-cell--8-col main-gallery">
-          <div class="grid effect-2">
+          <div class="grid">
             <div class="grid-sizer"></div>
             <div class="item"><a href="#"><img src="images/8.jpg"></a></div>
             <div class="item"><a href="#"><img src="images/9.jpg"></a></div>
@@ -58,7 +67,7 @@
         <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-phone"></div>
       </div>
       <div class="mdl-grid">
-        <div class="mdl-cell mdl-cell--4-col-phone mdl-cell--hide-desktop">
+        <div class="mdl-cell mdl-cell--4-col-phone mdl-cell--hide-tablet mdl-cell--hide-desktop">
           <div class="show-more font_8 mdl-typography--text-center">Show More</div>
         </div>
       </div>
@@ -80,7 +89,8 @@
         </div>
       </div>
     </footer>
-    <script src="js/masonry_invoke.js"></script>
+    <script src="js/masonry_invoke.js"> </script>
     <script src="js/footer_nav.js"></script>
+    <!--script(src='js/test.js') -->
   </body>
 </html>

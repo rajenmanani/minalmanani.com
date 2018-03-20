@@ -9,13 +9,20 @@
       gtag('js', new Date());
       gtag('config', 'UA-115957213-1');
     </script>
-    <title>Home | Minal Manani</title>
+    <title>About | Minal Manani</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="/js/main.min.js"></script>
-    <script src="https://unpkg.com/imagesloaded@3/imagesloaded.pkgd.js"></script>
-    <link rel="stylesheet" href="css/styles.min.css">
+    <!-- build:js /js/main.min.js-->
+    <script src="/js/mdl/material.min.js"></script>
+    <script src="/js/jquery/3.3.1/jquery.min.js"></script>
+    <!--  endbuild-->
+    <!-- build:css css/styles.min.css-->
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/navs.css">
+    <link rel="stylesheet" href="/css/mdl/material.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- endbuild-->
   </head>
   <body>
     <header>
@@ -41,26 +48,15 @@
     <main>
       <div class="mdl-grid">
         <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-phone mdl-cell--hide-tablet"></div>
-        <div class="mdl-cell mdl-cell--8-col main-gallery">
-          <div class="grid">
-            <div class="grid-sizer"></div>
-            <div class="item"><a href="#"><img src="images/8.jpg"></a></div>
-            <div class="item"><a href="#"><img src="images/9.jpg"></a></div>
-            <div class="item"><a href="#"><img src="images/1.jpg"></a></div>
-            <div class="item"><a href="#"><img src="images/3.jpg"></a></div>
-            <div class="item"><a href="#"><img src="images/6.png"></a></div>
-            <div class="item"><a href="#"><img src="images/2.jpg"></a></div>
-            <div class="item"><a href="#"><img src="images/4.jpg"></a></div>
-            <div class="item"><a href="#"><img src="images/5.jpg"></a></div>
-            <div class="item"><a href="#"><img src="images/7.jpg"></a></div>
+        <div class="mdl-cell mdl-cell--4-col mdl-cell--order-2-phone mdl-cell--order-2-tablet"><img class="about-img" src="images/Portrait_Placeholder.png"></div>
+        <div class="mdl-cell mdl-cell--4-col about-page mdl-cell--order-1-phone mdl-cell--order-2-tablet">
+          <p class="font_2 about-header">ABOUT</p>
+          <div class="about-body font_7"><p>I'm a portfolio paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. Feel free to drag and drop me anywhere you like on your page. I’m a great place for you to tell a story and let your users know a little more about you.</p>
+<p>This is a great space to write long text about your company and your services. You can use this space to go into a little more detail about your company. Talk about your team and what services you provide. Tell your visitors the story of how you came up with the idea for your business and what makes you different from your competitors. Make your company stand out and show your visitors who you are.</p>
+
           </div>
         </div>
-        <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-phone"></div>
-      </div>
-      <div class="mdl-grid">
-        <div class="mdl-cell mdl-cell--4-col-phone mdl-cell--hide-tablet mdl-cell--hide-desktop">
-          <div class="show-more font_8 mdl-typography--text-center">Show More</div>
-        </div>
+        <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-phone mdl-cell--hide-tablet"></div>
       </div>
     </main>
     <footer class="footer-menu-section">
@@ -80,8 +76,6 @@
         </div>
       </div>
     </footer>
-    <script src="js/masonry_invoke.js"> </script>
     <script src="js/footer_nav.js"></script>
-    <!--script(src='js/test.js') -->
   </body>
 </html>

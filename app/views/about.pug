@@ -1,0 +1,28 @@
+extends includes/layout.pug
+
+prepend title
+  title About | Minal Manani
+
+append scripts
+  //- /* script(src='js/masonry/masonry.pkgd.min.js') */
+  
+block nb-scripts
+  //- /* script(src='https://unpkg.com/imagesloaded@3/imagesloaded.pkgd.js') */
+
+append css
+
+append content  
+  include includes/common_header.pug
+  main
+    .mdl-grid
+      .mdl-cell.mdl-cell--2-col.mdl-cell--hide-phone.mdl-cell--hide-tablet
+      .mdl-cell.mdl-cell--4-col.mdl-cell--order-2-phone.mdl-cell--order-2-tablet
+        img.about-img(src="images/Portrait_Placeholder.png")
+          
+      .mdl-cell.mdl-cell--4-col.about-page.mdl-cell--order-1-phone.mdl-cell--order-2-tablet
+        p.font_2.about-header ABOUT
+        .about-body.font_7
+          include:markdown-it ../content/about.md
+      .mdl-cell.mdl-cell--2-col.mdl-cell--hide-phone.mdl-cell--hide-tablet
+block bodyscripts
+  script(src='js/footer_nav.js')

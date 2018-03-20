@@ -1,32 +1,4 @@
-if ($(window).width() < 480) {
-	$(function() {
-		
-		var initItems = 6
-
-		var $container = $('.grid');
-		// hide initial items
-		var $initialItems = $container.find('.item').hide();
-
-		var $items = getInitialItems($initialItems, initItems)
-
-		var $container = $container.masonry({
-				// layout no items initially
-				itemSelector: 'no-items',
-				columnWidth: '.grid-sizer'
-			})
-			// set proper itemSelector
-			.masonry('option', {
-				itemSelector: '.item'
-			})
-			.masonryImagesReveal($items);
-
-		$('.show-more').click(function() {
-			var $items = getMoreItems($initialItems, initItems);
-			$container.masonryImagesReveal($items);
-			$('.show-more').hide()
-		});
-
-	});
+$(function() {
 
 	// reveals all items after all item images
 	// have been loaded
@@ -62,7 +34,7 @@ if ($(window).width() < 480) {
 		var $items = $(list)
 		return $items
 	}
-	
+
 	function getMoreItems(i, e) {
 		var a = [];
 		$.each(i, function(index, value) {
@@ -72,25 +44,88 @@ if ($(window).width() < 480) {
 		for (i = e; i < a.length; i++) {
 			list += a[i]
 		}
-		
+
 		var $items = $(list)
 		return $items
 	}
 
-} else {
+	function isResized() {
+		var elems = $container.masonry('getItemElements')
+		console.log("items : " + elems.length);
+	}
 
-	// init Masonry
-	var $grid = $('.grid').masonry({
-		itemSelector: '.item',
-		percentPosition: true,
-	});
+	var $window = $(window);
+	
+	var masonryOptions = {
+		itemSelector: 'no-items',
+		columnWidth: '.grid-sizer',
+		stagger: 40,
+		transitionDuration: '0.8s'
+	}
 
-	// layout Masonry after each image loads
-	$grid.imagesLoaded().progress(function() {
-		$grid.masonry();
+	var $container = $('.grid');
+	var $initialItems = $container.find('.item').hide();
+	var moreShown = false;
+	var initialWindowWidth = ''
 
-	});
-	$grid.masonry('reloadItems')
+	if ($window.width() < 480) {
+	 	initialWindowWidth = $window.width();
+		var initItems = 6
+		var $items = getInitialItems($initialItems, initItems)
+		var $container = $container.masonry(masonryOptions)
+			// set proper itemSelector
+			.masonry('option', {
+				itemSelector: '.item'
+			})
+			.masonryImagesReveal($items);
 
+		$('.show-more').click(function() {
+			var $items = getMoreItems($initialItems, initItems);
+			$container.masonryImagesReveal($items);
+			$('.show-more').hide()
+			moreShown = true;
+		});
 
-}
+	} else {
+		initialWindowWidth = $window.width();
+		
+		var $container = $container.masonry(masonryOptions)
+			// set proper itemSelector
+			.masonry('option', {
+				itemSelector: '.item'
+			})
+			.masonryImagesReveal($initialItems);
+		$('.show-more').hide()
+	}
+
+	$window.resize(function() {
+
+		var currentWindowWidth = $window.width();
+
+		if (currentWindowWidth != initialWindowWidth) {
+
+			// console.log(initialWindowWidth);
+
+			if (currentWindowWidth > 480) {
+				//
+				// if ($window.width() != windowWidth) {
+				initialWindowWidth = $window.width();
+				
+				if (!moreShown) {
+
+					$container.masonry('destroy');
+					$container.find('.item').hide();
+					$container.masonry(masonryOptions)
+						// set proper itemSelector
+						.masonry('option', {
+							itemSelector: '.item'
+						})
+						.masonryImagesReveal($initialItems);
+					$('.show-more').hide()
+				}
+			}
+			//
+		}
+	})
+
+});

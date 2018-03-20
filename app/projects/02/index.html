@@ -9,13 +9,22 @@
       gtag('js', new Date());
       gtag('config', 'UA-115957213-1');
     </script>
-    <title>Home | Minal Manani</title>
+    <title>Project | Minal Manani</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="/js/main.min.js"></script>
-    <script src="https://unpkg.com/imagesloaded@3/imagesloaded.pkgd.js"></script>
-    <link rel="stylesheet" href="css/styles.min.css">
+    <!-- build:js /js/main.min.js-->
+    <script src="/js/mdl/material.min.js"></script>
+    <script src="/js/jquery/3.3.1/jquery.min.js"></script>
+    <!--  endbuild-->
+    <script src="/js/simplelightbox/simple-lightbox.min.js"></script>
+    <!-- build:css css/styles.min.css-->
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/navs.css">
+    <link rel="stylesheet" href="/css/mdl/material.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" type="text/css" href="/css/simplelightbox/simplelightbox.css">
+    <!-- endbuild-->
   </head>
   <body>
     <header>
@@ -41,26 +50,17 @@
     <main>
       <div class="mdl-grid">
         <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-phone mdl-cell--hide-tablet"></div>
-        <div class="mdl-cell mdl-cell--8-col main-gallery">
-          <div class="grid">
-            <div class="grid-sizer"></div>
-            <div class="item"><a href="#"><img src="images/8.jpg"></a></div>
-            <div class="item"><a href="#"><img src="images/9.jpg"></a></div>
-            <div class="item"><a href="#"><img src="images/1.jpg"></a></div>
-            <div class="item"><a href="#"><img src="images/3.jpg"></a></div>
-            <div class="item"><a href="#"><img src="images/6.png"></a></div>
-            <div class="item"><a href="#"><img src="images/2.jpg"></a></div>
-            <div class="item"><a href="#"><img src="images/4.jpg"></a></div>
-            <div class="item"><a href="#"><img src="images/5.jpg"></a></div>
-            <div class="item"><a href="#"><img src="images/7.jpg"></a></div>
+        <div class="mdl-cell mdl-cell--5-col mdl-cell--4-col-phone gallery"><a href="/images/1.jpg"><img class="project-img" src="/images/1.jpg"></a><a href="/images/2.jpg"><img class="project-img" src="/images/2.jpg"></a><a href="/images/3.jpg"><img class="project-img" src="/images/3.jpg"></a>
+        </div>
+        <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-phone portfolio-page">
+          <p class="font_2 about-header"> PROJECT 2 
+          </p>
+          <div class="about-body font_7"><p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. Feel free to drag and drop me anywhere you like on your page. I’m a great place for you to tell a story and let your users know a little more about you.</p>
+
+            <div class="portfolio-btn-wrapper"><a class="portfolio-btn font_8" href="/">Back</a></div>
           </div>
         </div>
-        <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-phone"></div>
-      </div>
-      <div class="mdl-grid">
-        <div class="mdl-cell mdl-cell--4-col-phone mdl-cell--hide-tablet mdl-cell--hide-desktop">
-          <div class="show-more font_8 mdl-typography--text-center">Show More</div>
-        </div>
+        <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-phone mdl-cell--hide-tablet"></div>
       </div>
     </main>
     <footer class="footer-menu-section">
@@ -80,8 +80,7 @@
         </div>
       </div>
     </footer>
-    <script src="js/masonry_invoke.js"> </script>
-    <script src="js/footer_nav.js"></script>
-    <!--script(src='js/test.js') -->
+    <script src="/js/projectGallery.js"></script>
+    <script src="/js/footer_nav.js"></script>
   </body>
 </html>
